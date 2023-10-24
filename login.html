@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revoada.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style-with-prefix.css">
+    <style>
+        .srouce {
+            text-align: center;
+            color: #b024f6;
+            padding: 10px;
+        }
+
+        .banner {
+            background-image: url('revoada.png');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+        }
+
+        /* Estilo para o link do banner */
+        .banner-link {
+            display: block;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="form-container">
+            <div class="srouce"><a title="Learn How to create Beautiful HTML & CSS login page template"
+                    href="https://revoada.com/br">Revoada.com</a></div>
+
+            <!-- Wrap a anchor tag around the banner with the desired URL -->
+            <a class="banner-link" href="https://revoada.com">
+                <div class="banner">
+                    <!-- Conteúdo do banner, como imagem ou texto -->
+                </div>
+            </a>
+
+            <div class="form-body">
+                <h2 class="title">Acessar Aplicativo</h2>
+                <div class="social-login">
+
+                </div>
+                <br />
+                <form class="the-form" onsubmit="return checkLogin()">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                    <input type="submit" value="Log In">
+                </form>
+                <p id="error-message" style="color: red; display: none;">Por favor, digite um email.</p>
+            </div>
+
+            <div class="form-footer">
+                <div>
+                    <span>Ainda não tem conta?</span> <a href="https://revoada.com">Cadastrar-se</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkLogin() {
+            const emailField = document.getElementById("email");
+            const errorMessage = document.getElementById("error-message");
+
+            if (emailField.value === "") {
+                errorMessage.style.display = "block";
+                return false; // Impede o envio do formulário
+            }
+
+            // Adicione a lógica de validação real aqui (por exemplo, usando regex)
+            // Suponhamos que o login seja válido para este exemplo
+            // Você pode adicionar validações reais aqui
+
+            // Redirecionar para a página index.html
+            window.location.href = 'index.html';
+
+            // Retorne false para impedir o envio do formulário
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>
