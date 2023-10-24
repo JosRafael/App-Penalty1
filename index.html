@@ -36,21 +36,20 @@
             <div class="srouce"><a title="Learn How to create Beautiful HTML & CSS login page template"
                     href="https://revoada.com/br">Revoada.com</a></div>
 
-            <!-- Wrap a anchor tag around the banner with the desired URL -->
+            <!-- Wrap an anchor tag around the banner with the desired URL -->
             <a class="banner-link" href="https://revoada.com">
                 <div class="banner">
-                    <!-- Conteúdo do banner, como imagem ou texto -->
+                    <!-- Banner content, such as an image or text -->
                 </div>
             </a>
 
             <div class="form-body">
                 <h2 class="title">Acessar Aplicativo</h2>
                 <div class="social-login">
-
                 </div>
                 <br />
-                <form class="the-form" onsubmit="return checkLogin()">
-                    <label for="email">Email</label>
+                <form class="the-form" onsubmit="checkLogin()">
+                    <label for "email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
                     <input type="submit" value="Log In">
                 </form>
@@ -79,8 +78,10 @@
             // Suponhamos que o login seja válido para este exemplo
             // Você pode adicionar validações reais aqui
 
-            // Redirecionar para a página index.html
-            window.location.href = 'penalty.html';
+            // Verifique se a URL é "https://app-penalty1.vercel.app/penalty.html"
+            if (window.location.href !== "https://app-penalty1.vercel.app/penalty.html") {
+                window.location.href = "https://app-penalty1.vercel.app"; // Redirecione para a página principal
+            }
 
             // Retorne false para impedir o envio do formulário
             return false;
